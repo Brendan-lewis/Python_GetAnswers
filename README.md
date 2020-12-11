@@ -1,4 +1,4 @@
-1. 为了获取查题token， 登录`http://user.fm210.cn/user/passport/register.html?yqm=12458`网站注册一个帐号，注册成功后可获赠5000积分(免费查询5000道题)
+1. 为了获取查题token， 登录`http://user.fm210.cn/user/passport/register.html?yqm=12458`网站注册一个帐号，注册成功后可获赠5000积分(免费查询5000道题)。
 2. 在用户中心将自己的token记录下来，如图红线处。![image-20201211185017039](使用方法.assets/image-20201211185017039.png)
 
 3. 在源代码的`ana.py`文件中的第18行，将你的token填入到url中，即`"https://user.fm210.cn/api/wk?token=你的token"`
