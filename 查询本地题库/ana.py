@@ -30,12 +30,17 @@ def GetAnswer(question):
     the_page.decode("unicode_escape")
     jsonData = json.loads(the_page)
     # 中文编码格式打印数据
-    answer = jsonData['da']
-    print("答案 : "+answer)
-    return answer
+    try:
+        answer = jsonData['da']
+        print("答案 : "+answer)
+        return answer
+    except KeyError:
+        print('无答案')
+        return '无答案'
 
 # name = "选答自测2"  # 这里自己输入文件名字,例如我们要处理ab.txt文件，此处name = "ab", 该写法需要将txt文件和该脚本放在同一目录下
-name = "必答自测1"
+# name = "必答自测1"
+name = "期末考试"
 txtName = name + ".html"
 csvName = name + ".csv"
 
